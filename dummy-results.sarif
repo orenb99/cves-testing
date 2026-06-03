@@ -1,0 +1,277 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "My Custom Scanner",
+          "rules": [
+            {
+              "id": "CVE-2024-8859",
+              "name": "PathTraversal",
+              "shortDescription": {
+                "text": "Path Traversal in mlflow"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CVE-2024-8859",
+                  "CWE-22"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-22083",
+              "name": "UnsafeDeserialization",
+              "shortDescription": {
+                "text": "jsonpickle Unsafe Deserialization"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CVE-2020-22083",
+                  "CWE-502"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-9740",
+              "name": "SSRF",
+              "shortDescription": {
+                "text": "urllib SSRF"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CVE-2019-9740",
+                  "CWE-918"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2018-1000807",
+              "name": "HardcodedCredentials",
+              "shortDescription": {
+                "text": "pypki2 Hardcoded Credentials"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CVE-2018-1000807",
+                  "CWE-798"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-41125",
+              "name": "WeakCryptography",
+              "shortDescription": {
+                "text": "Weak Cryptographic Algorithm"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CVE-2021-41125",
+                  "CWE-327"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2024-8859",
+          "level": "error",
+          "message": {
+            "text": "Intentionally vulnerable path traversal code (Instance 1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cve1.py"
+                },
+                "region": {
+                  "startLine": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-22083",
+          "level": "error",
+          "message": {
+            "text": "Intentionally vulnerable deserialization code (Instance 1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cve2.py"
+                },
+                "region": {
+                  "startLine": 15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-9740",
+          "level": "error",
+          "message": {
+            "text": "Intentionally vulnerable SSRF code (Instance 1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cve3.py"
+                },
+                "region": {
+                  "startLine": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2018-1000807",
+          "level": "error",
+          "message": {
+            "text": "Hardcoded credentials detected (Instance 1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cve4.py"
+                },
+                "region": {
+                  "startLine": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-41125",
+          "level": "error",
+          "message": {
+            "text": "Weak cryptography algorithm detected (Instance 1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cve5.py"
+                },
+                "region": {
+                  "startLine": 11
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-8859",
+          "level": "error",
+          "message": {
+            "text": "Intentionally vulnerable path traversal code (Instance 2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cve6.py"
+                },
+                "region": {
+                  "startLine": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-22083",
+          "level": "error",
+          "message": {
+            "text": "Intentionally vulnerable deserialization code (Instance 2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cve7.py"
+                },
+                "region": {
+                  "startLine": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-9740",
+          "level": "error",
+          "message": {
+            "text": "Intentionally vulnerable SSRF code (Instance 2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app.py"
+                },
+                "region": {
+                  "startLine": 35
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2018-1000807",
+          "level": "warning",
+          "message": {
+            "text": "Hardcoded credentials detected (Instance 2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app.py"
+                },
+                "region": {
+                  "startLine": 45
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-41125",
+          "level": "warning",
+          "message": {
+            "text": "Weak cryptography algorithm detected (Instance 2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app.py"
+                },
+                "region": {
+                  "startLine": 55
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
